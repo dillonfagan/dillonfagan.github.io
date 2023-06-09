@@ -8,19 +8,22 @@ const Home = () => {
       <AppHeader />
       <div className="flex flex-col p-8 md:p-12">
         <section>
+          <h2>Bio</h2>
+          <h3>2021</h3>
+          <p>I co-founded Providence's first cooperative tool-lending library, <a href="https://www.pvdthings.coop">PVD Things</a>. Our doors opened October 2022, and I've since been developing open source software for managing the library.</p>
+        </section>
+        <section>
           <h2>Projects</h2>
           <div className="flex flex-row flex-wrap gap-4">
             <ProjectTile
-              title="PVD Things - Librarian"
-              blurb="Software for managing tool library lending."
-            />
-            <ProjectTile
-              title="PVD Things - Catalog"
-              blurb="Tool library catalog software."
+              title="PVD Things"
+              blurb="Open source software for tool-lending libraries."
+              href="https://github.com/pvdthings"
             />
             <ProjectTile
               title="Mob"
               blurb="A timer for mob programming."
+              href="https://github.com/dillonfagan/mob"
             />
           </div>
         </section>
