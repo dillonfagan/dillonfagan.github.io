@@ -13,3 +13,7 @@ section {
 section h2 {
   @apply text-2xl font-semibold mb-4;
 }
+
+.tile {
+  @apply bg-gray-200 hover:bg-gray-100 grayscale hover:grayscale-0 cursor-default;
+}

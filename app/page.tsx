@@ -4,9 +4,9 @@ import Tile from "@/components/Tile"
 
 const Home = () => {
   return (
-    <main>
+    <main className="flex flex-col">
       <AppHeader />
-      <div className="flex flex-col p-12">
+      <div className="flex flex-col p-8 md:p-12">
         <section>
           <h2>Projects</h2>
           <div className="flex flex-row flex-wrap gap-4">
@@ -36,11 +36,18 @@ const Home = () => {
         <section>
           <h2>Languages</h2>
           <div className="flex flex-row flex-wrap gap-4">
-            <Tile title="JavaScript" />
-            <Tile title="TypeScript" />
-            <Tile title="C#" />
-            <Tile title="Dart" />
-            <Tile title="Python" />
+            <Tile title="JavaScript" imgSrc="/icons/js-mark.svg" />
+            <Tile title="TypeScript" imgSrc="/icons/ts-mark.svg" />
+            <Tile title="C#" imgSrc="/icons/csharp-mark.svg" />
+            <Tile title="Dart" imgSrc="/icons/dart-mark.png" />
+            <Tile title="Python" imgSrc="/icons/python-mark.png" />
+          </div>
+        </section>
+        <section>
+          <h2>Human Languages</h2>
+          <div className="flex flex-row flex-wrap gap-4">
+            <Tile title="English" />
+            <Tile title="German" />
           </div>
         </section>
       </div>
