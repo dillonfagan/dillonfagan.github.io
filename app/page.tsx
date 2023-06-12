@@ -1,4 +1,5 @@
 import AppHeader from "@/components/AppHeader"
+import Biography from "@/components/Biography"
 import ProjectTile from "@/components/ProjectTile"
 import Tile from "@/components/Tile"
 
@@ -9,8 +10,7 @@ const Home = () => {
       <div className="flex flex-col p-8 md:p-12">
         <section>
           <h2>Bio</h2>
-          <h3>2021</h3>
-          <p>I co-founded Providence's first cooperative tool-lending library, <a href="https://www.pvdthings.coop">PVD Things</a>. Our doors opened October 2022, and I've since been developing open source software for managing the library.</p>
+          <Biography />
         </section>
         <section>
           <h2>Projects</h2>

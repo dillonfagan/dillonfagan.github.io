@@ -19,7 +19,7 @@ section h3 {
 }
 
 section p {
-  @apply max-w-prose;
+  @apply max-w-prose mb-4;
 }
 
 p > a {
