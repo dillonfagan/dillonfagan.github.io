@@ -22,6 +22,10 @@ section p {
   @apply max-w-prose mb-4;
 }
 
+p.focus {
+  @apply text-gray-400 hover:text-inherit;
+}
+
 p > a {
   @apply text-sm p-1 bg-orange-500 hover:bg-orange-400 text-gray-50;
 }
