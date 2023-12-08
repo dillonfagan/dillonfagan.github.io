@@ -39,11 +39,10 @@ const Home = () => {
         <section>
           <h3>Languages</h3>
           <div className="flex flex-row flex-wrap gap-4">
-            <Tile title="JavaScript" imgSrc="/icons/js-mark.svg" />
             <Tile title="TypeScript" imgSrc="/icons/ts-mark.svg" />
-            <Tile title="C#" imgSrc="/icons/csharp-mark.svg" />
+            <Tile title="JavaScript" imgSrc="/icons/js-mark.svg" />
             <Tile title="Dart" imgSrc="/icons/dart-mark.png" />
-            <Tile title="Python" imgSrc="/icons/python-mark.png" />
+            <Tile title="C#" imgSrc="/icons/csharp-mark.svg" />
           </div>
         </section>
       </div>
