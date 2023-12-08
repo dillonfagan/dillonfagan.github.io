@@ -23,7 +23,7 @@ const Home = () => {
             <ProjectTile
               title="Mob"
               blurb="A timer for mob programming."
-              href="https://github.com/dillonfagan/mob"
+              href="/mob/index.html"
             />
           </div>
         </section>

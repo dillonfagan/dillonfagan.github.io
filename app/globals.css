@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white text-black;
+  @apply bg-white text-black selection:bg-orange-500 selection:text-white;
 }
 
 main {
