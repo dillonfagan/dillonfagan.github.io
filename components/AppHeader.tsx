@@ -1,17 +1,10 @@
-"use client"
-import { useState } from "react";
-
-const AppHeader = () => {
-    const [mousedOver, setMousedOver] = useState<boolean>(false);
-    
+const AppHeader = () => {    
     return (
-        <header className="p-8 md:p-12">
+        <header className="w-full md:w-4/5 lg:w-2/3 xl:w-1/2 px-8 md:px-0 py-8 md:py-12">
             <div
-                className={`float-left text-3xl cursor-default ${mousedOver && 'text-gray-400'}`}
-                onMouseEnter={() => setMousedOver(true)}
-                onMouseLeave={() => setMousedOver(false)}
+                className={`float-left text-3xl cursor-default`}
             >
-               {mousedOver ? 'Full-Stack Software Engineer' : 'Dillon Fagan'}
+               <span>Dillon Fagan</span>
             </div>
             <div className="float-right flex flex-row gap-3">
                 <a href="https://github.com/dillonfagan" target="_blank">

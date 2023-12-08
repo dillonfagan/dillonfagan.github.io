@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-50 text-gray-900;
+  @apply bg-white text-black;
+}
+
+main {
+  @apply mb-12;
 }
 
 section {
@@ -11,25 +15,21 @@ section {
 }
 
 section h2 {
-  @apply text-2xl font-semibold mb-4;
+  @apply text-2xl lg:text-3xl font-semibold mb-4 lg:mb-6;
 }
 
 section h3 {
-  @apply text-lg font-semibold mb-2;
+  @apply text-lg lg:text-xl font-semibold mb-2 lg:mb-4;
 }
 
 section p {
-  @apply max-w-prose mb-4;
-}
-
-p.focus {
-  @apply text-gray-400 hover:text-inherit;
+  @apply mb-4;
 }
 
 p > a {
-  @apply text-sm p-1 bg-orange-500 hover:bg-orange-400 text-gray-50;
+  @apply font-medium underline underline-offset-4 decoration-orange-500 hover:decoration-zinc-700 decoration-2;
 }
 
 .tile {
-  @apply bg-gray-200 hover:bg-gray-100 grayscale hover:grayscale-0;
+  @apply bg-zinc-100 rounded-md overflow-hidden hover:grayscale;
 }
