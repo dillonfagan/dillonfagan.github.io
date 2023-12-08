@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <main className="flex flex-col items-center">
       <AppHeader />
-      <div className="flex flex-col w-full md:w-4/5 lg:w-2/3 xl:w-1/2 2xl:w-1/3 p-8 md:p-0">
+      <div className="flex flex-col w-full md:w-4/5 lg:w-2/3 max-w-5xl p-8 md:p-0">
         <section>
           <h2 className="text-4xl lg:text-5xl break-words leading-normal lg:leading-relaxed text-zinc-400">
             I <span className="text-black">develop software</span>, <span className="text-black">envision products</span>, and build <span className="text-black">cooperative enterprises</span>.
@@ -34,8 +34,6 @@ const Home = () => {
             <Tile title="Svelte" imgSrc="/icons/svelte-mark.svg" />
             <Tile title="Flutter" imgSrc="/icons/flutter-mark.svg" />
             <Tile title=".NET" imgSrc="/icons/dotnet-mark.svg" />
-            <Tile title="Airtable" />
-            <Tile title="Supabase" />
           </div>
         </section>
         <section>
