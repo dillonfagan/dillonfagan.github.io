@@ -10,6 +10,10 @@ main {
   @apply mb-20;
 }
 
+section.hero {
+  @apply mt-20;
+}
+
 section + section {
   @apply mt-10;
 }
