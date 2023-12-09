@@ -1,6 +1,6 @@
 const AppHeader = () => {    
     return (
-        <header className="w-full md:w-4/5 lg:w-2/3 max-w-5xl px-8 md:px-0 py-8 md:py-12">
+        <header className="w-full md:w-4/5 lg:w-2/3 max-w-5xl px-4 md:px-0 py-4 md:py-12">
             <div
                 className={`float-left text-3xl cursor-default`}
             >

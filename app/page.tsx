@@ -1,4 +1,5 @@
 import AppHeader from "@/components/AppHeader"
+import HorizontalEllipsis from "@/components/HorizontalEllipsis"
 import ProjectTile from "@/components/ProjectTile"
 import Tile from "@/components/Tile"
 
@@ -6,23 +7,26 @@ const Home = () => {
   return (
     <main className="flex flex-col items-center">
       <AppHeader />
-      <div className="flex flex-col w-full md:w-4/5 lg:w-2/3 max-w-5xl p-8 md:p-0">
+      <div className="flex flex-col w-full md:w-4/5 lg:w-2/3 max-w-5xl p-4 md:p-0">
         <section>
           <h2 className="text-4xl lg:text-5xl break-words leading-normal lg:leading-relaxed text-zinc-400">
             I <span className="text-black">develop software</span>, <span className="text-black">envision products</span>, and build <span className="text-black">cooperative enterprises</span>.
           </h2>
         </section>
+        <section className="flex flex-row justify-center items-center text-zinc-400">
+          <HorizontalEllipsis />
+        </section>
         <section>
           <h2>Software</h2>
-          <div className="flex flex-row flex-wrap gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <ProjectTile
               title="Librarian"
-              blurb="Simply manage your library of things."
+              blurb="Simply manage your Library of Things."
               href="https://github.com/pvdthings/librarian_app"
             />
             <ProjectTile
               title="Mob"
-              blurb="A timer for mob programming."
+              blurb="Start mob programming with minimal setup."
               href="/mob/index.html"
             />
           </div>
@@ -43,6 +47,28 @@ const Home = () => {
             <Tile title="JavaScript" imgSrc="/icons/js-mark.svg" />
             <Tile title="Dart" imgSrc="/icons/dart-mark.png" />
             <Tile title="C#" imgSrc="/icons/csharp-mark.svg" />
+          </div>
+        </section>
+        <section className="major">
+          <h2>Cooperatives</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <ProjectTile
+              title="Starboard"
+              subtitle="Co-Founder, Developer"
+              blurb="Intended as a worker-owned co-op of software developers, Starboard launched PVD Things and built the first iteration of the Catalog software."
+            />
+            <ProjectTile
+              title="Providence Library of Things"
+              subtitle="Co-Founder, Digital Director"
+              blurb="A cooperative 501(c)(3) of 285+ members, serving the greater Providence area with rent-free tool lending. Members contribute volunteer time and money to split the operating costs. In our first year, the average borrower saved $500 annually."
+              href="https://www.pvdthings.coop"
+            />
+            <ProjectTile
+              title="Commonplace"
+              subtitle="Consultant"
+              blurb="Commonplace is a startup that envisions a platform cooperative for community coordination."
+              href="https://www.commonplace.coop"
+            />
           </div>
         </section>
       </div>

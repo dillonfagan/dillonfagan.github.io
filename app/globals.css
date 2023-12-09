@@ -7,11 +7,15 @@ body {
 }
 
 main {
-  @apply mb-12;
+  @apply mb-20;
 }
 
-section {
-  @apply mb-10;
+section + section {
+  @apply mt-10;
+}
+
+section + section.major {
+  @apply mt-20;
 }
 
 section h2 {
@@ -31,5 +35,5 @@ p > a {
 }
 
 .tile {
-  @apply bg-zinc-100 rounded-md overflow-hidden hover:grayscale;
+  @apply bg-zinc-100 rounded-md overflow-hidden;
 }
