@@ -56,6 +56,11 @@ const Home = () => {
               blurb="Start mob programming with minimal setup."
               href="/mob/index.html"
             />
+            <ProjectTile
+              title="Mutual Credit (Concept)"
+              blurb="A way to transact without any money."
+              href="https://github.com/dillonfagan/mutual_credit_app"
+            />
           </div>
         </section>
         <section>
