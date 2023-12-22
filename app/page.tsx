@@ -40,11 +40,18 @@ const Home = () => {
         </section>
         <section className="major">
           <h2>Software</h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <ProjectTile
+              title="Commonplace"
+              blurb="Taking the PVD Things software to the next level as a community social platform."
+              href="https://github.com/pvdthings/commonplace"
+              tags={['Planned']}
+            />
             <ProjectTile
               title="Librarian"
               blurb="Simply manage your Library of Things."
               href="https://github.com/pvdthings/librarian_app"
+              tags={['Beta']}
             />
             <ProjectTile
               title="Catalog"
@@ -57,9 +64,10 @@ const Home = () => {
               href="/mob/index.html"
             />
             <ProjectTile
-              title="Mutual Credit (Concept)"
+              title="Mutual Credit"
               blurb="A way to transact without any money."
               href="https://github.com/dillonfagan/mutual_credit_app"
+              tags={['Concept']}
             />
           </div>
         </section>
