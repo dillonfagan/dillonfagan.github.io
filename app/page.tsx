@@ -30,23 +30,11 @@ const Home = () => {
               blurb="A cooperative 501(c)(3) of 285+ members, serving the greater Providence area with rent-free tool lending. Members contribute volunteer time and money to split the operating costs. In our first year, the average borrower saved $500 annually."
               href="https://www.pvdthings.coop"
             />
-            <ProjectTile
-              title="Commonplace"
-              subtitle="Consultant"
-              blurb="Commonplace is a startup that envisions a platform cooperative for community coordination."
-              href="https://www.commonplace.coop"
-            />
           </div>
         </section>
         <section className="major">
           <h2>Software</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <ProjectTile
-              title="Commonplace"
-              blurb="Taking the PVD Things software to the next level as a community social platform."
-              href="https://github.com/pvdthings/commonplace"
-              tags={['Planned']}
-            />
             <ProjectTile
               title="Librarian"
               blurb="Simply manage your Library of Things."
