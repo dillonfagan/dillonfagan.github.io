@@ -22,6 +22,7 @@
     "typescript": "5.1.3"
   },
   "devDependencies": {
+    "daisyui": "^4.12.14",
     "gh-pages": "^5.0.0"
   }
 }
