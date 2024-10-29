@@ -20,43 +20,40 @@ const Home = () => {
           <h2>Cooperatives</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <ProjectTile
+              title="Providence Library of Things"
+              subtitle="Co-Founder, Digital Director"
+              blurb="PVD Things is a cooperative 501(c)(3) of 285+ members, serving the greater Providence area with rent-free tool lending. Members contribute volunteer time and money to split the operating costs. In our first year, the average borrower saved $500 annually."
+              href="https://www.pvdthings.coop"
+            />
+            <ProjectTile
               title="Starboard"
               subtitle="Co-Founder, Developer"
               blurb="Intended as a worker-owned co-op of software developers, Starboard launched PVD Things and built the first iteration of the Catalog software."
-            />
-            <ProjectTile
-              title="Providence Library of Things"
-              subtitle="Co-Founder, Digital Director"
-              blurb="A cooperative 501(c)(3) of 285+ members, serving the greater Providence area with rent-free tool lending. Members contribute volunteer time and money to split the operating costs. In our first year, the average borrower saved $500 annually."
-              href="https://www.pvdthings.coop"
             />
           </div>
         </section>
         <section className="major">
           <h2>Software</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4">
             <ProjectTile
-              title="Librarian"
-              blurb="Simply manage your Library of Things."
-              href="https://github.com/pvdthings/librarian_app"
+              title="Library OS"
+              blurb="The open source web operating system for your library of things."
+              href="https://github.com/pvdthings/library_os"
               tags={['Beta']}
             />
-            <ProjectTile
-              title="Catalog"
-              blurb="Browse the things at PVD Things."
-              href="https://app.pvdthings.coop"
-            />
-            <ProjectTile
-              title="Mob"
-              blurb="Start mob programming with minimal setup."
-              href="/mob/index.html"
-            />
-            <ProjectTile
-              title="Mutual Credit"
-              blurb="A way to transact without any money."
-              href="https://github.com/dillonfagan/mutual_credit_app"
-              tags={['Concept']}
-            />
+            <div className="grid grid-cols-2 gap-4">
+              <ProjectTile
+                title="Mutual Credit"
+                blurb="A way to transact without any money."
+                href="https://github.com/dillonfagan/mutual_credit_app"
+                tags={['Concept']}
+              />
+              <ProjectTile
+                title="Mob"
+                blurb="Start mob programming with minimal setup."
+                href="/mob/index.html"
+              />
+            </div>
           </div>
         </section>
         <section>

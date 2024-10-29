@@ -10,7 +10,7 @@ const ProjectTile = ({ title, subtitle = null, blurb, href = null, tags = null }
 			)}
 
 			<section>
-				<h3 className="mb-4 text-xl lg:text-2xl font-medium">{title}</h3>
+				<h3 className="mb-4 text-xl lg:text-2xl font-semibold">{title}</h3>
 				{subtitle && <h4 className="-mt-4 mb-4 text-sm lg:text-base font-medium text-zinc-500">{subtitle}</h4>}
 				<p>{blurb}</p>
 			</section>
