@@ -18,13 +18,20 @@ export default () => {
         </section>
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card>
-            <Card.Body>PVD Things</Card.Body>
+            <Card.Body>
+              <Text.Heading h={3}>PVD Things</Text.Heading>
+            </Card.Body>
           </Card>
           <Card>
-            <Card.Body>Library OS</Card.Body>
+            <Card.Body>
+              <Text.Heading h={3}>Library OS</Text.Heading>
+              <Text>Elevating the tool library experience, for borrowers and librarians.</Text>
+            </Card.Body>
           </Card>
           <Card>
-            <Card.Body>Mob</Card.Body>
+            <Card.Body>
+              <Text.Heading h={3}>Mob app</Text.Heading>
+            </Card.Body>
           </Card>
         </section>
       </div>
