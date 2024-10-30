@@ -16,18 +16,16 @@ export default () => {
               </Text.Hero>
             </Card.Body>
           </Card.Outlined>
-          <section>
-            <Card>
-              <Card.Body>
-                <Text.Heading h="h2" size="2xl">
-                  Why am I here?
-                </Text.Heading>
-                <Text size="xl">
-                  Why would I want to engage with these ideas or enterprises?
-                </Text>
-              </Card.Body>
-            </Card>
-          </section>
+          <Card>
+            <Card.Body>
+              <Text.Heading h="h2" size="2xl">
+                Why am I here?
+              </Text.Heading>
+              <Text size="xl">
+                Why would I want to engage with these ideas or enterprises?
+              </Text>
+            </Card.Body>
+          </Card>
           <Projects />
         </div>
       </main>
