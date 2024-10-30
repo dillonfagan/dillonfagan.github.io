@@ -1,23 +1,24 @@
 "use client";
-import { Card, Center, Text } from "@/components";
+import { Card, Center, Image, Text } from "@/components";
 import { ProjectsProvider, useProjects } from "@/content";
 
 export default () => {
   const tech = [
     {
       title: "React",
+      image: "/icons/react-mark.svg"
     },
     {
       title: "Svelte",
+      image: "/icons/svelte-mark.svg"
     },
     {
       title: "Flutter",
-    },
-    {
-      title: "Express",
+      image: "/icons/flutter-mark.svg"
     },
     {
       title: ".NET",
+      image: "/icons/dotnet-mark.svg"
     },
   ];
 
@@ -53,11 +54,12 @@ export default () => {
           <Center>
             <Text.Heading h='h2' size='xl'>Technologies</Text.Heading>
           </Center>
-          <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-8">
+          <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8">
             {tech.map((t) => (
               <Card>
+                <Image src={t.image} alt={t.title} height={100} width={100} />
                 <Card.Body>
-                  <Text>{t.title}</Text>
+                  <Text.Heading>{t.title}</Text.Heading>
                 </Card.Body>
               </Card>
             ))}
