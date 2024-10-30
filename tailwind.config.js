@@ -24,8 +24,6 @@ module.exports = {
           "base-300": "#eeeeee",
         },
       },
-      "light",
-
     ],
   },
 }

@@ -1,21 +1,14 @@
-import { PropsWithChildren } from "react";
+import { createElement, PropsWithChildren } from "react";
 
-const Text = ({ children }) => (<span>{children}</span>);
+const Text = ({ size, children }: PropsWithChildren<{ size?: TextSize }>) => {
+  return (
+    <span className={`text-${size ?? 'base'}`}>{children}</span>
+  );
+};
 
-Text.Heading = ({ h, children }: PropsWithChildren<{ h: H }>) => {
-  switch (h) {
-    case 1:
-      return <h1 className="font-semibold text-3xl">{children}</h1>;
-    case 2:
-      return <h2 className="font-semibold text-2xl">{children}</h2>;
-    case 3:
-      return <h3 className="font-semibold text-xl">{children}</h3>;
-    case 4:
-      return <h4 className="font-semibold text-lg">{children}</h4>;
-    case 5:
-    default:
-      return <h5 className="font-semibold">{children}</h5>;
-  }
+Text.Heading = ({ h, size, children }: PropsWithChildren<{ h?: H, size?: TextSize }>) => {
+  const className = `font-semibold text-${size ?? 'base'}`;
+  return createElement(h ?? 'h5', { className }, children);
 };
 
 Text.Hero = ({ children }) => {
@@ -30,6 +23,8 @@ Text.Primary = ({ children }) => {
   );
 };
 
-export type H = 1 | 2 | 3 | 4 | 5;
+export type H = 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
+
+export type TextSize = 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl';
 
 export default Text;
