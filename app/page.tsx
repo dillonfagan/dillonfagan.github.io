@@ -1,12 +1,35 @@
 "use client";
-import { Card, Text } from "@/components";
+import { Card, Center, Text } from "@/components";
 import { ProjectsProvider, useProjects } from "@/content";
 
 export default () => {
+  const tech = [
+    {
+      title: "React",
+    },
+    {
+      title: "Svelte",
+    },
+    {
+      title: "Flutter",
+    },
+    {
+      title: "Express",
+    },
+    {
+      title: ".NET",
+    },
+  ];
+
   return (
     <ProjectsProvider>
       <main>
         <div className="flex flex-col gap-4 lg:gap-8 items-stretch mx-auto w-screen sm:w-4/5 md:w-2/3 lg:w-3/5 p-4 lg:p-8">
+          <Center>
+            <Text.Heading h="h1" size="3xl">
+              Dillon Fagan
+            </Text.Heading>
+          </Center>
           <Card.Outlined>
             <Card.Body>
               <Text.Hero>
@@ -22,11 +45,23 @@ export default () => {
                 Why am I here?
               </Text.Heading>
               <Text size="xl">
-                Why would I want to engage with these ideas or enterprises?
+                ...
               </Text>
             </Card.Body>
           </Card>
           <Projects />
+          <Center>
+            <Text.Heading h='h2' size='xl'>Technologies</Text.Heading>
+          </Center>
+          <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-8">
+            {tech.map((t) => (
+              <Card>
+                <Card.Body>
+                  <Text>{t.title}</Text>
+                </Card.Body>
+              </Card>
+            ))}
+          </section>
         </div>
       </main>
     </ProjectsProvider>
@@ -54,7 +89,7 @@ const Projects = () => {
   );
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
+    <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8">
       {projects.map((p) => (
         <ProjectCard title={p.title} summary={p.summary} />
       ))}
