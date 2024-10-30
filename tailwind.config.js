@@ -12,6 +12,20 @@ module.exports = {
     require("daisyui")
   ],
   daisyui: {
-    themes: ["light"],
+    themes: [
+      {
+        mytheme: {
+          "primary": "#f97316",
+          "secondary": "#f6d860",
+          "accent": "#37cdbe",
+          "neutral": "#3d4451",
+          "base-100": "#ffffff",
+          "base-200": "#f4f4f4",
+          "base-300": "#eeeeee",
+        },
+      },
+      "light",
+
+    ],
   },
 }

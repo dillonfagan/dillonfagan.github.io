@@ -1,10 +1,10 @@
 const Card = ({ children }) => {
-  return <div className="bg-base-200 card">{children}</div>;
+  return <div className="bg-base-200 card select-none">{children}</div>;
 };
 
 Card.Outlined = ({ children }) => {
   return (
-    <div className="bg-transparent card border border-base-300">
+    <div className="bg-transparent card border border-base-300 select-none">
       {children}
     </div>
   );

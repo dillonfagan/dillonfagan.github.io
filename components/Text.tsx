@@ -24,7 +24,7 @@ Text.Hero = ({ children }) => {
   );
 };
 
-Text.Accent = ({ children }) => {
+Text.Primary = ({ children }) => {
   return (
     <span className="text-primary">{children}</span>
   );

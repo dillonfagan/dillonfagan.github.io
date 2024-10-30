@@ -5,14 +5,19 @@ export default () => {
     <main>
       <div className="flex flex-col gap-4 items-stretch mx-auto w-screen sm:w-4/5 md:w-2/3 lg:w-3/5 p-4 lg:p-8">
         <Card.Outlined>
-            <Card.Body>
-              <Text.Hero>I <Text.Accent>develop</Text.Accent> software, <Text.Accent>envision</Text.Accent> products, and <Text.Accent>organize</Text.Accent> cooperative enterprises.</Text.Hero>
-            </Card.Body>
+          <Card.Body>
+            <Text.Hero>
+              I <Text.Primary>develop</Text.Primary> software,{" "}
+              <Text.Primary>envision</Text.Primary> products, and{" "}
+              <Text.Primary>organize</Text.Primary> cooperative enterprises.
+            </Text.Hero>
+          </Card.Body>
         </Card.Outlined>
         <section>
           <Card>
             <Card.Body>
-              My name is Dillon Fagan, software engineer, product manager, and cooperative entrepreneur. For the past 6 years, I've worked in fintech building backend and frontend applications for wealth management. For 4 of those years, I've been co-founder and product manager for an open source suite called Library OS.
+              <Text.Heading h={2}>Why am I here?</Text.Heading>
+              <Text>Why would I want to engage with these ideas or enterprises?</Text>
             </Card.Body>
           </Card>
         </section>
@@ -25,7 +30,10 @@ export default () => {
           <Card>
             <Card.Body>
               <Text.Heading h={3}>Library OS</Text.Heading>
-              <Text>Elevating the tool library experience, for borrowers and librarians.</Text>
+              <Text>
+                Elevating the tool library experience, for borrowers and
+                librarians.
+              </Text>
             </Card.Body>
           </Card>
           <Card>
