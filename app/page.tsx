@@ -1,5 +1,5 @@
 "use client";
-import { Card, Center, Image, Text } from "@/components";
+import { Card, Center, Image, Relative, Text } from "@/components";
 import { ProjectsProvider, useProjects } from "@/content";
 
 export default () => {
@@ -25,7 +25,7 @@ export default () => {
   return (
     <ProjectsProvider>
       <main>
-        <div className="flex flex-col gap-4 lg:gap-8 items-stretch mx-auto w-screen sm:w-4/5 md:w-2/3 lg:w-3/5 p-4 lg:p-8">
+        <div className="flex flex-col gap-4 lg:gap-8 items-stretch mx-auto w-screen sm:w-4/5 lg:w-2/3 p-4 lg:p-8">
           <Center>
             <Text.Heading h="h1" size="3xl">
               Dillon Fagan
@@ -54,13 +54,17 @@ export default () => {
           <Center>
             <Text.Heading h='h2' size='xl'>Technologies</Text.Heading>
           </Center>
-          <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8">
+          <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8 h-64 xl:h-36">
             {tech.map((t) => (
-              <Card>
-                <Image src={t.image} alt={t.title} height={100} width={100} />
-                <Card.Body>
-                  <Text.Heading>{t.title}</Text.Heading>
-                </Card.Body>
+              <Card key={`tech-${t.title}`}>
+                <Relative>
+                  <Relative.TopRight distance={2}>
+                    <Text.Heading>{t.title}</Text.Heading>
+                  </Relative.TopRight>
+                  <Relative.BottomLeft>
+                    <Image src={t.image} alt={t.title} height={100} width={100} />
+                  </Relative.BottomLeft>
+                </Relative>
               </Card>
             ))}
           </section>
@@ -93,7 +97,7 @@ const Projects = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8">
       {projects.map((p) => (
-        <ProjectCard title={p.title} summary={p.summary} />
+        <ProjectCard key={`project-${p.title}`} title={p.title} summary={p.summary} />
       ))}
     </section>
   );
