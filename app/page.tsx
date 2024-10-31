@@ -1,24 +1,24 @@
 "use client";
-import { Card, Center, Image, Relative, Text } from "@/components";
+import { Card, Center, Image, Text } from "@/components";
 import { ProjectsProvider, useProjects } from "@/content";
 
 export default () => {
   const tech = [
     {
       title: "React",
-      image: "/icons/react-mark.svg"
+      image: "/icons/react-mark.svg",
     },
     {
       title: "Svelte",
-      image: "/icons/svelte-mark.svg"
+      image: "/icons/svelte-mark.svg",
     },
     {
       title: "Flutter",
-      image: "/icons/flutter-mark.svg"
+      image: "/icons/flutter-mark.svg",
     },
     {
       title: ".NET",
-      image: "/icons/dotnet-mark.svg"
+      image: "/icons/dotnet-mark.svg",
     },
   ];
 
@@ -45,26 +45,24 @@ export default () => {
               <Text.Heading h="h2" size="2xl">
                 Why am I here?
               </Text.Heading>
-              <Text size="xl">
-                ...
-              </Text>
+              <Text size="xl">...</Text>
             </Card.Body>
           </Card>
           <Projects />
           <Center>
-            <Text.Heading h='h2' size='xl'>Technologies</Text.Heading>
+            <Text.Heading h="h2" size="xl">
+              Technologies
+            </Text.Heading>
           </Center>
           <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8 h-64 xl:h-36">
             {tech.map((t) => (
-              <Card key={`tech-${t.title}`}>
-                <Relative>
-                  <Relative.TopRight distance={2}>
+              <Card key={`tech-${t.title}`} relative>
+                <Card.Body>
                     <Text.Heading>{t.title}</Text.Heading>
-                  </Relative.TopRight>
-                  <Relative.BottomLeft>
-                    <Image src={t.image} alt={t.title} height={100} width={100} />
-                  </Relative.BottomLeft>
-                </Relative>
+                    <div className="absolute -bottom-1 -right-1">
+                      <Image src={t.image} alt={t.title} height={80} width={80} />
+                    </div>
+                </Card.Body>
               </Card>
             ))}
           </section>
@@ -97,7 +95,11 @@ const Projects = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8">
       {projects.map((p) => (
-        <ProjectCard key={`project-${p.title}`} title={p.title} summary={p.summary} />
+        <ProjectCard
+          key={`project-${p.title}`}
+          title={p.title}
+          summary={p.summary}
+        />
       ))}
     </section>
   );

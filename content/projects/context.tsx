@@ -23,10 +23,11 @@ export const ProjectsProvider = ({ children }: PropsWithChildren) => {
       },
       {
         title: 'Library OS',
-        summary: 'Changing the way we interact with tools and tool libraries.'
+        summary: 'Everything you need to manage a library of things.'
       },
       {
-        title: 'Mob app'
+        title: 'Mutual Credit',
+        summary: 'A glimpse into the future of digital finance, backed by community mutual credit. Transactions without money.'
       }
     ]
   };
