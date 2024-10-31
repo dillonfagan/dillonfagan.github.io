@@ -1,6 +1,6 @@
 "use client";
 import { Card, Center, Image, Text } from "@/components";
-import { Backgrounds } from "@/components/Card";
+import { Backgrounds } from "@/components/style";
 import { ProjectsProvider, useProjects } from "@/content";
 
 export default () => {
