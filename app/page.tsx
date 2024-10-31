@@ -1,7 +1,8 @@
 "use client";
-import { Card, Center, Image, Text } from "@/components";
+import { Card, Image, Margin, Text } from "@/components";
 import { Backgrounds } from "@/components/style";
 import { ProjectsProvider, useProjects } from "@/content";
+import { PropsWithChildren } from "react";
 
 export default () => {
   const tech = [
@@ -31,11 +32,9 @@ export default () => {
     <ProjectsProvider>
       <main>
         <div className="flex flex-col gap-4 lg:gap-8 items-stretch mx-auto w-screen sm:w-4/5 lg:w-2/3 p-4 lg:p-8">
-          <Center>
-            <Text.Heading h="h1" size="3xl">
-              Dillon Fagan
-            </Text.Heading>
-          </Center>
+          <Text.Heading h="h1" size="3xl">
+            Dillon Fagan
+          </Text.Heading>
           <Card.Outlined>
             <Card.Body>
               <Text.Hero>
@@ -53,20 +52,17 @@ export default () => {
               <Text size="xl">...</Text>
             </Card.Body>
           </Card>
+          <SectionHeading>Projects</SectionHeading>
           <Projects />
-          <Center>
-            <Text.Heading h="h2" size="2xl">
-              Technologies
-            </Text.Heading>
-          </Center>
+          <SectionHeading>Technologies</SectionHeading>
           <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8 h-64 xl:h-36">
             {tech.map(({ color, image, title }) => (
               <Card key={`tech-${title}`} bg={color} relative>
                 <Card.Body>
-                    <Text.Heading size='xl'>{title}</Text.Heading>
-                    <div className="absolute -bottom-1 -right-1">
-                      <Image src={image} alt={title} height={80} width={80} />
-                    </div>
+                  <Text.Heading size="xl">{title}</Text.Heading>
+                  <div className="absolute -bottom-1 -right-1">
+                    <Image src={image} alt={title} height={80} width={80} />
+                  </div>
                 </Card.Body>
               </Card>
             ))}
@@ -74,6 +70,16 @@ export default () => {
         </div>
       </main>
     </ProjectsProvider>
+  );
+};
+
+const SectionHeading = ({ children }: PropsWithChildren) => {
+  return (
+    <Margin top={5}>
+      <Text.Heading h="h2" size="2xl">
+        {children}
+      </Text.Heading>
+    </Margin>
   );
 };
 
