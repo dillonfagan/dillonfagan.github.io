@@ -7,7 +7,18 @@ const Text = ({ size, children }: PropsWithChildren<{ size?: TextSize }>) => {
 };
 
 Text.Heading = ({ h, size, children }: PropsWithChildren<{ h?: H, size?: TextSize }>) => {
-  const className = `font-semibold text-${size ?? 'base'}`;
+  const textSize = {
+    "base": "text-base",
+    "lg": "text-lg",
+    "xl": "text-xl",
+    "2xl": "text-2xl",
+    "3xl": "text-3xl",
+    "4xl": "text-4xl",
+    "5xl": "text-5xl"
+  };
+
+  const className = `font-semibold ${textSize[size]}`;
+  
   return createElement(h ?? 'h5', { className }, children);
 };
 

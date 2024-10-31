@@ -1,24 +1,29 @@
 "use client";
 import { Card, Center, Image, Text } from "@/components";
+import { Backgrounds } from "@/components/Card";
 import { ProjectsProvider, useProjects } from "@/content";
 
 export default () => {
   const tech = [
     {
+      title: ".NET",
+      image: "/icons/dotnet-mark.svg",
+      color: Backgrounds.purple[100],
+    },
+    {
       title: "React",
       image: "/icons/react-mark.svg",
+      color: Backgrounds.blue[100],
     },
     {
       title: "Svelte",
       image: "/icons/svelte-mark.svg",
+      color: Backgrounds.orange[100],
     },
     {
       title: "Flutter",
       image: "/icons/flutter-mark.svg",
-    },
-    {
-      title: ".NET",
-      image: "/icons/dotnet-mark.svg",
+      color: Backgrounds.sky[100],
     },
   ];
 
@@ -50,17 +55,17 @@ export default () => {
           </Card>
           <Projects />
           <Center>
-            <Text.Heading h="h2" size="xl">
+            <Text.Heading h="h2" size="2xl">
               Technologies
             </Text.Heading>
           </Center>
           <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8 h-64 xl:h-36">
-            {tech.map((t) => (
-              <Card key={`tech-${t.title}`} relative>
+            {tech.map(({ color, image, title }) => (
+              <Card key={`tech-${title}`} bg={color} relative>
                 <Card.Body>
-                    <Text.Heading>{t.title}</Text.Heading>
+                    <Text.Heading size='xl'>{title}</Text.Heading>
                     <div className="absolute -bottom-1 -right-1">
-                      <Image src={t.image} alt={t.title} height={80} width={80} />
+                      <Image src={image} alt={title} height={80} width={80} />
                     </div>
                 </Card.Body>
               </Card>
