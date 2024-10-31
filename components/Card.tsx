@@ -17,6 +17,10 @@ Card.Body = ({ children }) => {
   return <div className="card-body">{children}</div>;
 };
 
+Card.Actions = ({ children }) => {
+  return <div className="card-actions">{children}</div>;
+};
+
 export type Props = PropsWithChildren<{ bg?: Background, relative?: true }>;
 
 export default Card;

@@ -9,6 +9,7 @@ export type ProjectsViewModel = {
 export type Project = {
   title: string;
   summary?: string;
+  url?: string;
 };
 
 export const useProjects = () => {
@@ -19,7 +20,8 @@ export const ProjectsProvider = ({ children }: PropsWithChildren) => {
   const value = {
     projects: [
       {
-        title: 'PVD Things'
+        title: 'PVD Things',
+        url: 'https://www.pvdthings.coop/',
       },
       {
         title: 'Library OS',

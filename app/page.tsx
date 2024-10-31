@@ -2,6 +2,7 @@
 import { Card, Image, Margin, Text } from "@/components";
 import { Backgrounds } from "@/components/style";
 import { ProjectsProvider, useProjects } from "@/content";
+import { ArrowRight } from "@phosphor-icons/react";
 import { PropsWithChildren } from "react";
 
 export default () => {
@@ -89,27 +90,42 @@ const Projects = () => {
   const ProjectCard = ({
     title,
     summary,
+    url,
   }: {
     title: string;
     summary?: string;
+    url?: string;
   }) => (
-    <Card>
+    <Card relative>
       <Card.Body>
         <Text.Heading h="h3" size="xl">
           {title}
         </Text.Heading>
-        {summary && <Text>{summary}</Text>}
+        <div className="flex-grow">{summary && <Text>{summary}</Text>}</div>
+
+        {url && (
+          <div className="absolute bottom-4 right-4">
+            <a
+              href={url}
+              target="_blank"
+              className="btn btn-primary btn-circle shadow-sm"
+            >
+              <ArrowRight color="white" size="1.5rem" />
+            </a>
+          </div>
+        )}
       </Card.Body>
     </Card>
   );
 
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8">
-      {projects.map((p) => (
+      {projects.map(({ title, summary, url }) => (
         <ProjectCard
-          key={`project-${p.title}`}
-          title={p.title}
-          summary={p.summary}
+          key={`project-${title}`}
+          title={title}
+          summary={summary}
+          url={url}
         />
       ))}
     </section>
