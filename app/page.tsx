@@ -45,14 +45,6 @@ export default () => {
               </Text.Hero>
             </Card.Body>
           </Card.Outlined>
-          <Card>
-            <Card.Body>
-              <Text.Heading h="h2" size="2xl">
-                Why am I here?
-              </Text.Heading>
-              <Text size="xl">...</Text>
-            </Card.Body>
-          </Card>
           <SectionHeading>Projects</SectionHeading>
           <Projects />
           <SectionHeading>Technologies</SectionHeading>

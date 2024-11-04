@@ -21,6 +21,7 @@ export const ProjectsProvider = ({ children }: PropsWithChildren) => {
     projects: [
       {
         title: 'PVD Things',
+        summary: "A democratically operated tool library. Borrow what you need when you need it. It's that simple.",
         url: 'https://www.pvdthings.coop/',
       },
       {
