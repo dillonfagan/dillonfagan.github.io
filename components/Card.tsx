@@ -2,12 +2,12 @@ import { PropsWithChildren } from "react";
 import { Background, Backgrounds } from "./style";
 
 const Card = ({ children, bg, relative }: Props) => {
-  return <div className={`${bg ?? Backgrounds.base[200]} card flex flex-col overflow-hidden ${relative ? 'relative' : ''} select-none`}>{children}</div>;
+  return <div className={`${bg ?? Backgrounds.base[200]} card card-compact lg:card-normal flex flex-col overflow-hidden ${relative ? 'relative' : ''} select-none`}>{children}</div>;
 };
 
 Card.Outlined = ({ children }: Props) => {
   return (
-    <div className="bg-transparent card flex flex-col border border-base-300 overflow-hidden select-none">
+    <div className="bg-transparent card card-compact lg:card-normal flex flex-col border border-base-300 overflow-hidden select-none">
       {children}
     </div>
   );

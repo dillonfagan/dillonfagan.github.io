@@ -24,7 +24,7 @@ Text.Heading = ({ h, size, children }: PropsWithChildren<{ h?: H, size?: TextSiz
 
 Text.Hero = ({ children }) => {
   return (
-    <span className="font-semibold text-3xl lg:text-5xl text-base-content">{children}</span>
+    <span className="font-semibold text-5xl text-base-content">{children}</span>
   );
 };
 
