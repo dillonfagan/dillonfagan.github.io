@@ -24,7 +24,7 @@ Text.Heading = ({
 
 Text.Hero = ({ children }) => {
   return (
-    <span className="font-semibold text-5xl lg:text-8xl text-base-content">
+    <span className="font-semibold text-5xl lg:text-8xl text-neutral-400">
       {children}
     </span>
   );
