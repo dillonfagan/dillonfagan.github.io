@@ -39,9 +39,12 @@ export default () => {
           <Card.Outlined>
             <Card.Body>
               <Text.Hero>
-                I <Text.Primary>develop</Text.Primary> software,<br />
-                <Text.Primary>envision</Text.Primary> products,<br /> 
-                and <Text.Primary>organize</Text.Primary> cooperative enterprises.
+                I <Text.Primary>develop</Text.Primary> software,
+                <br />
+                <Text.Primary>envision</Text.Primary> products,
+                <br />
+                and <Text.Primary>organize</Text.Primary> cooperative
+                enterprises.
               </Text.Hero>
             </Card.Body>
           </Card.Outlined>
@@ -93,17 +96,15 @@ const Projects = () => {
         <Text.Heading h="h3" size="xl">
           {title}
         </Text.Heading>
-        <div className="flex-grow max-w-prose">{summary && <Text>{summary}</Text>}</div>
-
+        <div className="flex-grow max-w-prose">
+          {summary && <Text>{summary}</Text>}
+        </div>
         {url && (
-          <div className="absolute bottom-4 right-4">
-            <a
-              href={url}
-              target="_blank"
-              className="btn btn-primary btn-circle shadow-sm"
-            >
-              <ArrowRight color="white" size="1.5rem" />
-            </a>
+          <div className="flex flex-row items-center justify-end gap-2">
+            <Text size="sm" weight="semibold">
+              Learn More
+            </Text>
+            <ArrowLink href={url} />
           </div>
         )}
       </Card.Body>
@@ -121,5 +122,17 @@ const Projects = () => {
         />
       ))}
     </section>
+  );
+};
+
+const ArrowLink = ({ href }: { href: string }) => {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      className="btn btn-sm btn-primary btn-circle shadow hover:shadow-sm active:shadow-none"
+    >
+      <ArrowRight color="white" size="1.2rem" weight="bold" />
+    </a>
   );
 };
