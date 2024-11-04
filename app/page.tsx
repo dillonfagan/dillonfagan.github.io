@@ -93,7 +93,7 @@ const Projects = () => {
         <Text.Heading h="h3" size="xl">
           {title}
         </Text.Heading>
-        <div className="flex-grow">{summary && <Text>{summary}</Text>}</div>
+        <div className="flex-grow max-w-prose">{summary && <Text>{summary}</Text>}</div>
 
         {url && (
           <div className="absolute bottom-4 right-4">

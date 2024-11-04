@@ -30,7 +30,7 @@ export const ProjectsProvider = ({ children }: PropsWithChildren) => {
       },
       {
         title: 'Mutual Credit',
-        summary: 'A glimpse into the future of digital finance, backed by community mutual credit. Transactions without money.'
+        summary: "Instant access to community credit and low transaction fees for local businesses. It's the future of digital finance for the cooperative age."
       }
     ]
   };
