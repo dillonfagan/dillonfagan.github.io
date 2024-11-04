@@ -1,5 +1,6 @@
 import { ArrowLink, Card, Text } from "@/components";
 import { useProjects } from "@/content";
+import SectionHeading from "./SectionHeading";
 
 const Projects = () => {
   const { projects } = useProjects();
@@ -34,16 +35,23 @@ const Projects = () => {
   );
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8">
-      {projects.map(({ title, summary, url }) => (
-        <ProjectCard
-          key={`project-${title}`}
-          title={title}
-          summary={summary}
-          url={url}
-        />
-      ))}
-    </section>
+    <Card.Outlined>
+      <Card.Body>
+        <SectionHeading>Projects</SectionHeading>
+      </Card.Body>
+      <Card.Body>
+        <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8">
+          {projects.map(({ title, summary, url }) => (
+            <ProjectCard
+              key={`project-${title}`}
+              title={title}
+              summary={summary}
+              url={url}
+            />
+          ))}
+        </section>
+      </Card.Body>
+    </Card.Outlined>
   );
 };
 
