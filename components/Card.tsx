@@ -7,7 +7,7 @@ const Card = ({ children, bg, relative }: Props) => {
 
 Card.Outlined = ({ children }: Props) => {
   return (
-    <div className="bg-transparent card card-compact lg:card-normal flex flex-col border border-base-300 overflow-hidden select-none">
+    <div className="bg-transparent card card-bordered card-compact lg:card-normal flex flex-col overflow-hidden select-none">
       {children}
     </div>
   );

@@ -32,7 +32,7 @@ export default () => {
   return (
     <ProjectsProvider>
       <main>
-        <div className="flex flex-col gap-4 lg:gap-8 items-stretch mx-auto w-screen sm:w-4/5 lg:w-2/3 p-4 lg:p-8">
+        <div className="flex flex-col gap-4 lg:gap-8 items-stretch mx-auto w-screen p-4 lg:p-8">
           <Text.Heading h="h1" size="3xl">
             Dillon Fagan
           </Text.Heading>
